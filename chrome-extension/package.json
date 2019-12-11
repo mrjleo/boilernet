@@ -1,0 +1,23 @@
+{
+    "name": "boilernet-chrome-extension",
+    "version": "0.0.1",
+    "description": "Easily extract content from web pages.",
+    "scripts": {
+        "copy": "copyfiles -f manifest.json src/content.js src/popup.html src/popup.js dist/ && copyfiles files/* dist/",
+        "build": "parcel build src/background.js -d dist/ -o background --no-minify && npm run copy",
+        "buildmin": "parcel build src/background.js -d dist/ -o background && npm run copy"
+    },
+    "license": "Apache 2.0",
+    "devDependencies": {
+        "babel-polyfill": "^6.26.0",
+        "parcel-bundler": "^1.12.4",
+        "copyfiles": "^2.1.1"
+    },
+    "dependencies": {
+        "@tensorflow/tfjs": "^1.3.2",
+        "wink-tokenizer": "^5.2.1"
+    },
+    "web_accessible_resources": [
+        "files/*"
+    ]
+}

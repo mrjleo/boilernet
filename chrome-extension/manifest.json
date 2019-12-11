@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "BoilerNET Demo",
+    "version": "0.0.1",
+    "description": "Extract the content from web pages.",
+    "author": "Jurek Leonhardt",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "BoilerNet"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["content.js"],
+            "all_frames": true,
+            "run_at": "document_start"
+        }
+    ]
+}
