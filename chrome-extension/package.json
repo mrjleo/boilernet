@@ -7,7 +7,6 @@
         "build": "parcel build src/background.js -d dist/ -o background --no-minify && npm run copy",
         "buildmin": "parcel build src/background.js -d dist/ -o background && npm run copy"
     },
-    "license": "Apache 2.0",
     "devDependencies": {
         "babel-polyfill": "^6.26.0",
         "parcel-bundler": "^1.12.4",
