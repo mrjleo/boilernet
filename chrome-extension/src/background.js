@@ -57,4 +57,5 @@ async function classify(documentRepresentation, tab) {
     const inputs = getInputs(documentRepresentation, words, tags);
     const predictions = await model.predict(inputs).data();
     chrome.tabs.sendMessage(tab.id, {text: 'visualize', predictions: predictions});
+    chrome.runtime.sendMessage({text: 'enableButton'});
 }
