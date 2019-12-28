@@ -2,6 +2,7 @@
     "name": "boilernet-chrome-extension",
     "version": "0.0.1",
     "description": "Easily extract content from web pages.",
+    "license": "GPL-3.0-only",
     "scripts": {
         "copy": "copyfiles -f manifest.json src/content.js src/popup.html src/popup.js dist/ && copyfiles files/* dist/",
         "build": "parcel build src/background.js -d dist/ -o background --no-minify && npm run copy",
