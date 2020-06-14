@@ -8,6 +8,7 @@ This code is tested with Python 3.7.5 and
 * tqdm==4.39.0
 * nltk==3.4.5
 * beautifulsoup4==4.8.1
+* html5lib==1.0.1
 * scikit-learn==0.21.3
 
 ## Usage
