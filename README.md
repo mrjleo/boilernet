@@ -1,5 +1,5 @@
 # BoilerNet
-Boilerplate Removal using Deep Learning
+This is the implementation of our paper [Boilerplate Removal using a Neural Sequence Labeling Model](https://dl.acm.org/doi/abs/10.1145/3366424.3383547).
 
 ## Requirements
 This code is tested with Python 3.7.5 and
@@ -75,6 +75,31 @@ optional arguments:
 
 For example, the model can be trained like this:
 ```
-python3 net/train.py ~/googletrends_data/ -e 20 --working_dir ~/googletrends_train
+python3 net/train.py ~/googletrends_data/ -e 50 --working_dir ~/googletrends_train
 ```
 
+## Hyperparameters
+In order to reproduce the paper results, use the following hyperparameters:
+* `-s datasets/googletrends/50-30-100-split/ -w 1000 -t 50` (during preprocessing)
+* `-l 2 -u 256 -d 0.5 -s 256 -e 50 -b 16 --interval 1` (during training)
+
+Select the checkpoint with the highest F1 score on the validation set.
+
+## Citation
+```
+@inproceedings{10.1145/3366424.3383547,
+author = {Leonhardt, Jurek and Anand, Avishek and Khosla, Megha},
+title = {Boilerplate Removal Using a Neural Sequence Labeling Model},
+year = {2020},
+isbn = {9781450370240},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3366424.3383547},
+doi = {10.1145/3366424.3383547},
+booktitle = {Companion Proceedings of the Web Conference 2020},
+pages = {226–229},
+numpages = {4},
+location = {Taipei, Taiwan},
+series = {WWW ’20}
+}
+```
