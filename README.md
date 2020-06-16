@@ -3,7 +3,7 @@ Boilerplate Removal using Deep Learning
 
 ## Requirements
 This code is tested with Python 3.7.5 and
-* tensorflow==2.0.0
+* tensorflow==2.1.0
 * numpy==1.17.3
 * tqdm==4.39.0
 * nltk==3.4.5
@@ -77,3 +77,4 @@ For example, the model can be trained like this:
 ```
 python3 net/train.py ~/googletrends_data/ -e 20 --working_dir ~/googletrends_train
 ```
+
