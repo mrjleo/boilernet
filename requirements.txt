@@ -1,0 +1,7 @@
+beautifulsoup4==4.8.1
+html5lib==1.0.1
+nltk==3.4.5
+numpy==1.17.3
+scikit-learn==0.21.3
+tensorflow==2.0.0
+tqdm==4.39.0
