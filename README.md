@@ -12,10 +12,7 @@ This code is tested with Python 3.7.5 and
 * scikit-learn==0.21.3
 
 ## Usage
-The following datasets are included and ready to use:
-* L3S-GN1
-* CleanEval
-* GoogleTrends-2017
+The GoogleTrends-2017 dataset is included and ready to use.
 
 ### Preprocessing
 ```
