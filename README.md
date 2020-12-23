@@ -74,13 +74,13 @@ optional arguments:
 
 For example, the model can be trained like this:
 ```
-python3 net/train.py googletrends_data/ --working_dir googletrends_train
+python3 net/train.py googletrends_data --working_dir googletrends_train
 ```
 
 ## Hyperparameters
 In order to reproduce the paper results, use the following hyperparameters:
-* `-s datasets/googletrends/50-30-100-split/ -w 1000 -t 50` (during preprocessing)
-* `-l 2 -u 256 -d 0.5 -s 256 -e 50 -b 16 --interval 1` (during training)
+* `-s googletrends-2017/50-30-100-split -w 1000 -t 50` (preprocessing)
+* `-l 2 -u 256 -d 0.5 -s 256 -e 50 -b 16 --interval 1` (training)
 
 Select the checkpoint with the highest F1 score on the validation set.
 
