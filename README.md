@@ -12,7 +12,9 @@ This code is tested with Python 3.7.5 and
 * scikit-learn==0.21.3
 
 ## Usage
-The GoogleTrends-2017 dataset is included and ready to use.
+The datasets are available for download here:
+* [GoogleTrends-2017](https://drive.google.com/file/d/1jkc6RC9_VmG8_-XBlk5A3FkZsx_v4k_Y/view?usp=sharing)
+* [CleanEval](https://drive.google.com/file/d/1tFD_OCaksfIyut_9LtJQMqy5J5HIrGvD/view?usp=sharing)
 
 ### Preprocessing
 ```
@@ -33,9 +35,9 @@ optional arguments:
                         Only use the top-l HTML tags
   --save SAVE           Where to save the results
 ```
-First, preprocess your dataset, for example:
+After downloading and extracting one of the zip files above, preprocess your dataset, for example:
 ```
-python3 net/preprocess.py datasets/googletrends/prepared_html/ -s datasets/googletrends/50-30-100-split/ -w 1000 -t 50 --save ~/googletrends_data
+python3 net/preprocess.py googletrends-2017/prepared_html/ -s googletrends-2017/50-30-100-split/ -w 1000 -t 50 --save googletrends_data
 ```
 
 ### Training
@@ -72,7 +74,7 @@ optional arguments:
 
 For example, the model can be trained like this:
 ```
-python3 net/train.py ~/googletrends_data/ -e 50 --working_dir ~/googletrends_train
+python3 net/train.py googletrends_data/ --working_dir googletrends_train
 ```
 
 ## Hyperparameters
