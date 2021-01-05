@@ -186,6 +186,9 @@ def main():
     ap.add_argument('--save', default='result', help='Where to save the results')
     args = ap.parse_args()
 
+    # files required for tokenization
+    nltk.download('punkt')
+
     filenames = []
     for d in args.DIRS:
         filenames.extend(util.get_filenames(d))
