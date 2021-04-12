@@ -1,7 +1,15 @@
 # BoilerNet
 This is the implementation of our paper [Boilerplate Removal using a Neural Sequence Labeling Model](https://dl.acm.org/doi/abs/10.1145/3366424.3383547).
 
-## Requirements
+## Web Content Extraction
+BoilerNet is now integrated into the SoBigData platform! Use your own or a pre-trained model to extract text from HTML pages or annotate them directly. Available in the [__SoBigData Method Engine__](https://sobigdata.d4science.org/group/sobigdatalab/method-engine).
+
+## Usage
+This section explains how to train and evaluate your own model. The datasets are available for download here:
+* [GoogleTrends-2017](https://drive.google.com/file/d/1jkc6RC9_VmG8_-XBlk5A3FkZsx_v4k_Y/view?usp=sharing)
+* [CleanEval](https://drive.google.com/file/d/1tFD_OCaksfIyut_9LtJQMqy5J5HIrGvD/view?usp=sharing)
+
+### Requirements
 This code is tested with Python 3.7.5 and
 * tensorflow==2.1.0
 * numpy==1.17.3
@@ -10,11 +18,6 @@ This code is tested with Python 3.7.5 and
 * beautifulsoup4==4.8.1
 * html5lib==1.0.1
 * scikit-learn==0.21.3
-
-## Usage
-The datasets are available for download here:
-* [GoogleTrends-2017](https://drive.google.com/file/d/1jkc6RC9_VmG8_-XBlk5A3FkZsx_v4k_Y/view?usp=sharing)
-* [CleanEval](https://drive.google.com/file/d/1tFD_OCaksfIyut_9LtJQMqy5J5HIrGvD/view?usp=sharing)
 
 ### Preprocessing
 ```
@@ -82,23 +85,23 @@ In order to reproduce the paper results, use the following hyperparameters:
 * `-s googletrends-2017/50-30-100-split -w 1000 -t 50` (preprocessing)
 * `-l 2 -u 256 -d 0.5 -s 256 -e 50 -b 16 --interval 1` (training)
 
-Select the checkpoint with the highest F1 score on the validation set.
+Select the checkpoint with the highest F1 score (average over both values) on the validation set.
 
 ## Citation
-```
+```bibtex
 @inproceedings{10.1145/3366424.3383547,
-author = {Leonhardt, Jurek and Anand, Avishek and Khosla, Megha},
-title = {Boilerplate Removal Using a Neural Sequence Labeling Model},
-year = {2020},
-isbn = {9781450370240},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3366424.3383547},
-doi = {10.1145/3366424.3383547},
-booktitle = {Companion Proceedings of the Web Conference 2020},
-pages = {226–229},
-numpages = {4},
-location = {Taipei, Taiwan},
-series = {WWW ’20}
+  author = {Leonhardt, Jurek and Anand, Avishek and Khosla, Megha},
+  title = {Boilerplate Removal Using a Neural Sequence Labeling Model},
+  year = {2020},
+  isbn = {9781450370240},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3366424.3383547},
+  doi = {10.1145/3366424.3383547},
+  booktitle = {Companion Proceedings of the Web Conference 2020},
+  pages = {226–229},
+  numpages = {4},
+  location = {Taipei, Taiwan},
+  series = {WWW ’20}
 }
 ```
