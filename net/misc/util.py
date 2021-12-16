@@ -11,12 +11,6 @@ TAGS_TO_IGNORE = {'head', 'iframe', 'script', 'meta', 'link', 'style', 'input', 
                   'button', 'noscript'}
 
 
-
-
-
-
-
-
 def get_int_map(items, offset=0):
     """Return a dict that maps each unique item in "items" to a unique int ID."""
     # we sort the items to guarantee that we get the same mapping every time for a fixed input

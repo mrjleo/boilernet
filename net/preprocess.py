@@ -10,7 +10,7 @@ from collections import defaultdict
 import nltk
 import numpy as np
 import tensorflow as tf
-from bs4 import BeautifulSoup, Comment, NavigableString
+from bs4 import BeautifulSoup, NavigableString
 from tqdm import tqdm
 
 from misc import util
